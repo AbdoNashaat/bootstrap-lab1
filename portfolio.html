@@ -1,22 +1,159 @@
-<!DOCTYPE html>
+<!DOCTYPE html data-bs-theme="dark">
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./portfolioStyle.css" />
     <title>Portfolio</title>
 </head>
 
 <body>
 
-    
+    <nav class="navbar navbar-expand-lg bg-secondary-subtle p-0">
+        <div class="container-fluid">
+            <a class="navbar-brand"><img src="assets/itiLogo.png" style="width: 40px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-3 nav-tabs">
+                    <li class="nav-item ">
+                        <a class="nav-link active" aria-current="page" href="0">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="1">Personal Info</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="2">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="3">Achievements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="4">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="5">Contact Info</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-container">
+        <!-- Home Page -->
+        <div id="home" class="page active">
+            <div class="container mt-3">
+                <div class="row align-items-center">
+                    <div class="col-md-3 text-center">
+                        <h3>I Receive</h3>
+                        <p class="border border-3 p-2 mx-auto" style="width: 70%;">YOUR MONEY 💲</p>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <h2 class="text-danger">Trade Offer From</h2>
+                        <h2 class="text-secondary">Web Developer: Abdelghafaar Nashaat</h2>
+                        <figure class="figure">
+                            <img src="assets/nobackgroundmeme.png" class="figure-img img-fluid rounded">
+                        </figure>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <h3>You Receive</h3>
+                        <p class="border border-3 p-2 mx-auto" style="width: 70%;">MY TIME 👨🏻‍💻</p>
+                    </div>
+                </div>
+                <div class="row justify-content-evenly">
+                    <button class="btn btn-outline-danger fs-4 m-4 col-4" style="width: 30%;">Not Convinced
+                        Yet?</button>
+                    <button class="btn btn-outline-success fs-4 m-4 col-4" style="width: 30%;" data-bs-toggle="modal"
+                        data-bs-target="#businessModal">Let's Do Some Business!</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Personal Info Page -->
+        <div id="personal-info" class="page">
+            <div class="container mt-3">
+                <div class="row justify-content-between">
+                    <div class="col">
+                        hello
+                    </div>
+                    <div class="col-3">
+                        <img src="assets/profile.jpg" alt="Personal Photo" class="rounded-5 img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects Page -->
+        <div id="projects" class="page">
+            <div class="container mt-3">
+                <h2>Projects</h2>
+                <p>Details about your projects...</p>
+                <!-- Add your projects content here -->
+            </div>
+        </div>
+
+        <!-- Achievements Page -->
+        <div id="achievements" class="page">
+            <div class="container mt-3">
+                <h2>Achievements</h2>
+                <p>Details about your achievements...</p>
+                <!-- Add your achievements content here -->
+            </div>
+        </div>
+
+        <div id="skills" class="page">
+            <div class="container mt-3">
+                <h2>Skills</h2>
+                <p>Details about your skills...</p>
+                <!-- Add your skills content here -->
+            </div>
+        </div>
+
+        <!-- Contact Me Page -->
+        <div id="contact" class="page">
+            <div class="container mt-3">
+                <h2>Contact Me</h2>
+                <p>Contact information or form...</p>
+                <!-- Add your contact content here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal (unchanged) -->
+    <div class="modal fade" id="businessModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-secondary-subtle">
+                    <div class="container text-center">
+                        <h1 class="fs-5" id="exampleModalLabel">Where To Reach Me</h1>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="container d-flex justify-content-evenly">
+                        <a href="https://www.linkedin.com/in/abdelghafaar-nashaat-502693230/" target="_blank"
+                            class="choice-button linkedin">LinkedIn</a>
+                        <a href="mailto:abdelghafaarnashaat@gmail.com?subject=Inquiry from Portfolio Page&body=Hello,%0A%0AI am writing to you from your website to discuss..."
+                            class="choice-button email">Email</a>
+                        <a href="https://wa.me/201126565444" target="_blank" class="choice-button whatsapp">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        </script>
+    <script src="./protfolioScript.js"></script>
+
 </body>
 
 </html>
