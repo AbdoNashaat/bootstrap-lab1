@@ -1,82 +1,52 @@
- body {
-     background-image: url('assets/stars-galaxy.gif');
-     background-repeat: no-repeat;
-     /* Prevents the GIF from repeating */
-     background-size: cover;
-     /* Ensures the GIF covers the entire background */
-     background-position: center;
-     /* Centers the GIF */
- }
+*,body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
- .choice-button {
-     display: inline-block;
-     padding: 10px 16px;
-     border-radius: 20px;
-     /* Rounded corners */
-     text-decoration: none;
-     /* Removes underline from the link */
-     font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-     font-size: 16px;
-     font-weight: 600;
-     /* Bolder font weight */
-     text-align: center;
-     white-space: nowrap;
-     transition: background-color 0.3s ease, border-color 0.3s ease;
- }
+body {
+    background-image: url('assets/stars-galaxy.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+/* overflow-x: hidden on body => works great on PCs */
+/* overflow-x: hidden on pagecontainer => works great on phones */
 
- .choice-button:hover {
-     background-color: rgba(10, 102, 194, 0.08);
-     /* Light blue background on hover */
- }
-
- .linkedin {
-     background-color: #0A66C2;
-     color: white;
-     border: 1px solid #0A66C2;
- }
-
- .whatsapp {
-     background-color: #25D366;
-     color: white;
-     border: 1px solid #25D366;
- }
-
- .email {
-     background-color: #D44638;
-     color: white;
-     border: 1px solid #D44638;
- }
-
- .page-container {
+.page-container {
     position: relative;
-    overflow: hidden;
-    min-height: 100vh; /* Ensure full height */
+    width: 100%;    
 }
 
 .page {
     position: absolute;
-    top: 0;
-    left: 100%; /* Start off-screen to the right */
+    top: 10px;
+    left: 100%;
     width: 100%;
     opacity: 0;
-    transition: all 0.25s ease-in-out; /* Smooth transition */
-    visibility: hidden; /* Hide inactive pages */
+    transition: all 0.25s ease-in-out;
+    visibility: hidden;
+    /* Hide inactive pages */
 }
 
 .page.active {
     left: 0;
     opacity: 1;
-    visibility: visible; /* Show active page */
+    visibility: visible;
+    /* Show active page */
 }
 
 .page.slide-in-left {
-    left: -100%; /* Start off-screen to the left */
+    left: -100%;
+    /* Start off-screen to the left */
     opacity: 1;
     visibility: hidden;
 }
 
 .page.slide-in-right {
-    left: 100%; /* Start off-screen to the right */
+    left: 100%;
+    /* Start off-screen to the right */
     opacity: 1;
     visibility: hidden;
 }
@@ -91,4 +61,63 @@
     left: 100%;
     opacity: 0;
     visibility: hidden;
+}
+
+.underlineClass {
+    position: relative;
+    display: inline-block;
+}
+
+.underlineClass::after {
+    content: '';
+    position: absolute;
+    left: 10%;
+    bottom: -22px;
+    width: 80%;
+    text-align: center;
+    height: 26px;
+    background-image: url('assets/line.png');
+    background-repeat: repeat-x;
+}
+
+.outline-stuff {
+    outline: 0px solid blue;
+}
+
+.businessBtns {
+    min-width: 100px;
+}
+
+.choice-button {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+}
+
+.choice-button:hover {
+    background-color: rgba(10, 102, 194, 0.08);
+}
+
+.linkedin {
+    background-color: #0A66C2;
+    color: white;
+    border: 1px solid #0A66C2;
+}
+
+.whatsapp {
+    background-color: #25D366;
+    color: white;
+    border: 1px solid #25D366;
+}
+
+.email {
+    background-color: #D44638;
+    color: white;
+    border: 1px solid #D44638;
 }

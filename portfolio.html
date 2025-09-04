@@ -22,7 +22,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-3 nav-tabs">
-                    <li class="nav-item ">
+                    <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="0">Home</a>
                     </li>
                     <li class="nav-item">
@@ -56,7 +56,7 @@
                     </div>
                     <div class="col-md-6 text-center">
                         <h2 class="text-danger">Trade Offer From</h2>
-                        <h2 class="text-secondary">Web Developer: Abdelghafaar Nashaat</h2>
+                        <h3 class="text-secondary">Web Developer: Abdelghafaar Nashaat</h3>
                         <figure class="figure">
                             <img src="assets/nobackgroundmeme.png" class="figure-img img-fluid rounded">
                         </figure>
@@ -66,10 +66,9 @@
                         <p class="border border-3 p-2 mx-auto" style="width: 70%;">MY TIME 👨🏻‍💻</p>
                     </div>
                 </div>
-                <div class="row justify-content-evenly">
-                    <button class="btn btn-outline-danger fs-4 m-4 col-4" style="width: 30%;">Not Convinced
-                        Yet?</button>
-                    <button class="btn btn-outline-success fs-4 m-4 col-4" style="width: 30%;" data-bs-toggle="modal"
+                <div class="d-flex flex-wrap justify-content-evenly p-3 gap-3 outline-stuff">
+                    <button class="btn btn-outline-danger fs-3 businessBtns" data-bs-toggle="modal" data-bs-target="#notConvinced">Not Convinced Yet?</button>
+                    <button class="btn btn-outline-success fs-3 businessBtns" data-bs-toggle="modal"
                         data-bs-target="#businessModal">Let's Do Some Business!</button>
                 </div>
             </div>
@@ -78,12 +77,55 @@
         <!-- Personal Info Page -->
         <div id="personal-info" class="page">
             <div class="container mt-3">
-                <div class="row justify-content-between">
-                    <div class="col">
-                        hello
-                    </div>
+                <div class="row align-items-center">
                     <div class="col-3">
-                        <img src="assets/profile.jpg" alt="Personal Photo" class="rounded-5 img-fluid">
+                        <img src="assets/profile.jpg" alt="Personal Photo" class="rounded img-fluid">
+                    </div>
+                    <div class="col outline-stuff">
+                        <div class="text-center pb-3 outline-stuff m-1">
+                            <h2 class="fst-italic text-body-secondary underlineClass">Who am I?</h2>
+                        </div>
+                        <div class="p-4 outline-stuff">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h3 class="card-title text-center fw-bold text-primary">Abdelghafaar Nashaat
+                                        Abdelghafaar</h3>
+                                    <h5 class="card-subtitle mb-3 text-center text-muted">Full Stack Developer</h5>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <p class="mb-2"><strong>Date of Birth:</strong> 15/01/2000</p>
+                                            <p class="mb-2"><strong>Country:</strong> Egypt</p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p class="mb-2"><strong>Email:</strong> abdelghafaarnashaat@gmail.com</p>
+                                            <p class="mb-2"><strong>Phone:</strong> +20 112 656 5444</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h4 class="card-title fw-semibold">Education</h4>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">Full-Stack Web Development Intensive Code Camp, ITI
+                                            (2025)</li>
+                                        <li class="list-group-item">B.S. in Computer Engineering, Eastern Mediterranean
+                                            University (2018-2023)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title fw-semibold">Hobbies</h4>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="badge bg-primary">Video Games</span>
+                                        <span class="badge bg-primary">Problem Solving</span>
+                                        <span class="badge bg-primary">History</span>
+                                        <span class="badge bg-primary">Geopolitics</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -93,8 +135,42 @@
         <div id="projects" class="page">
             <div class="container mt-3">
                 <h2>Projects</h2>
-                <p>Details about your projects...</p>
-                <!-- Add your projects content here -->
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Pizza Landing Page</h5>
+                                <p class="card-text">A responsive landing page for a pizza restaurant, built with HTML5
+                                    and CSS3.</p>
+                                <a href="https://abdonashaat.github.io/HTML5-CSS3-Lab2/" class="btn btn-success"
+                                    target="_blank">View Project Page</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">E-Learning Website Landing Page</h5>
+                                <p class="card-text">A modern landing page for an e-learning platform, designed using
+                                    Bootstrap.</p>
+                                <a href="https://abdonashaat.github.io/bootstrap-lab2/" class="btn btn-success"
+                                    target="_blank">View Project Page</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Recycling App (EzRecycle)</h5>
+                                <p class="card-text">A graduation project focused on a recycling app to promote
+                                    sustainability.</p>
+                                <a href="https://github.com/AbdoNashaat/EzRecycle" class="btn btn-success"
+                                    target="_blank">View on GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
 
@@ -102,30 +178,205 @@
         <div id="achievements" class="page">
             <div class="container mt-3">
                 <h2>Achievements</h2>
-                <p>Details about your achievements...</p>
-                <!-- Add your achievements content here -->
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">High Academic CGPA</h5>
+                                <p class="card-text">Graduated from college with a high CGPA, reflecting dedication and
+                                    academic excellence.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">A+ Flutter Graduation Project</h5>
+                                <p class="card-text">Developed EzRecycle, a cross-platform recycling app using Flutter,
+                                    earning an A+ grade.</p>
+                                <a href="https://github.com/AbdoNashaat/EzRecycle" class="btn btn-primary"
+                                    target="_blank">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Web Development Proficiency</h5>
+                                <p class="card-text">Skilled in HTML5, CSS3, and Bootstrap, with experience building
+                                    responsive and user-friendly web applications.</p>
+                                <a href="https://github.com/AbdoNashaat" class="btn btn-primary" target="_blank">View My
+                                    GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Hackathon Winner</h5>
+                                <p class="card-text">Won first place in a regional hackathon for developing an
+                                    innovative mobile app prototype.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div id="skills" class="page">
             <div class="container mt-3">
                 <h2>Skills</h2>
-                <p>Details about your skills...</p>
-                <!-- Add your skills content here -->
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Flutter</h5>
+                                <p class="card-text">Proficient in building cross-platform mobile apps with Flutter,
+                                    including EzRecycle, a graduation project that earned an A+.</p>
+                                <a href="https://github.com/AbdoNashaat/EzRecycle" class="btn btn-primary"
+                                    target="_blank">View Flutter Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">HTML5</h5>
+                                <p class="card-text">Skilled in creating semantic and accessible web structures using
+                                    HTML5 for responsive websites.</p>
+                                <a href="https://abdonashaat.github.io/HTML5-CSS3-Lab2/" class="btn btn-primary"
+                                    target="_blank">View HTML5 Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">CSS3</h5>
+                                <p class="card-text">Experienced in styling web applications with CSS3, including
+                                    animations and responsive layouts.</p>
+                                <a href="https://abdonashaat.github.io/HTML5-CSS3-Lab2/" class="btn btn-primary"
+                                    target="_blank">View CSS3 Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Bootstrap</h5>
+                                <p class="card-text">Adept at using Bootstrap to create responsive and modern web
+                                    interfaces efficiently.</p>
+                                <a href="https://abdonashaat.github.io/bootstrap-lab2/" class="btn btn-primary"
+                                    target="_blank">View Bootstrap Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">JavaScript</h5>
+                                <p class="card-text">Proficient in JavaScript for adding interactivity and dynamic
+                                    functionality to web applications.</p>
+                                <a href="https://github.com/AbdoNashaat" class="btn btn-primary" target="_blank">View My
+                                    GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Problem Solving</h5>
+                                <p class="card-text">Strong analytical skills, demonstrated through debugging code and
+                                    optimizing app performance.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Working in a Team</h5>
+                                <p class="card-text">Experienced in collaborating on projects, contributing to team
+                                    success in academic and development settings.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">GitHub User</h5>
+                                <p class="card-text">Active GitHub user, managing repositories and collaborating on
+                                    open-source projects.</p>
+                                <a href="https://github.com/AbdoNashaat" class="btn btn-primary" target="_blank">View My
+                                    GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <!-- Contact Me Page -->
         <div id="contact" class="page">
             <div class="container mt-3">
-                <h2>Contact Me</h2>
-                <p>Contact information or form...</p>
-                <!-- Add your contact content here -->
+                <div class="col bg-secondary-subtle rounded shadow">
+                    <div class="text-center pb-3 outline-stuff m-1">
+                        <h2 class="fst-italic text-body-secondary underlineClass">Get in Touch</h2>
+                    </div>
+                    <div class="p-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <p class="mb-2">
+                                            <i class="me-2 text-primary"></i>
+                                            <strong>Email:</strong> <a
+                                                href="mailto:john.doe@example.com">abdelghafaarnashaat@gmail.com</a>
+                                        </p>
+                                        <p class="mb-2">
+                                            <i class="me-2 text-primary"></i>
+                                            <strong>Phone:</strong> <a href="tel:+15551234567">+20 123 456 7890</a>
+                                        </p>
+                                        <p class="mb-2">
+                                            <i class="me-2 text-primary"></i>
+                                            <strong>WhatsApp:</strong> <a href="https://wa.me/15551234567"
+                                                target="_blank">+1 (555) 123-4567</a>
+                                        </p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p class="mb-2">
+                                            <i class="me-2 text-primary"></i>
+                                            <strong>GitHub:</strong> <a href="https://github.com/AbdoNashaat/"
+                                                target="_blank">github.com/abdonashaat</a>
+                                        </p>
+                                        <p class="mb-2">
+                                            <i class="me-2 text-primary"></i>
+                                            <strong>LinkedIn:</strong> <a
+                                                href="https://www.linkedin.com/in/abdelghafaar-nashaat-502693230/ "
+                                                target="_blank">linkedin.com/in/abdelghafaar-nashaat</a>
+                                        </p>
+                                        <p class="mb-2">
+                                            <i class="me-2 text-primary"></i>
+                                            <strong>X:</strong> <a href="https://x.com/shinystar8021"
+                                                target="_blank">@shinystar8021</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="text-center mt-4">
+                                    <a href="mailto:abdelghafaarnashaat@gmail.com" class="btn btn-primary btn-sm me-2">
+                                        <i class="me-1"></i> Send Email
+                                    </a>
+                                    <a href="https://wa.me/15551234567" class="btn btn-success btn-sm" target="_blank">
+                                        <i class="bi bi-whatsapp me-1"></i> Message on WhatsApp
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Modal (unchanged) -->
     <div class="modal fade" id="businessModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -147,7 +398,20 @@
         </div>
     </div>
 
-
+    <div class="modal fade" id="notConvinced" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-secondary-subtle">
+                    <div class="container text-center">
+                        <h1 class="fs-5 text-danger" id="exampleModalLabel">Under Construction!</h1>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <p>Wanted to add cool animations that would direct you to my projects and skills pages, but instead I have to focus on my javascript project 😞 </p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">

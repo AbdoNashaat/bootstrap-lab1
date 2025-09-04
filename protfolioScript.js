@@ -20,13 +20,12 @@ html.setAttribute('data-bs-theme', newTheme);
 
 const navLinks = document.querySelectorAll('.nav-link');
 const pages = Array.from(document.querySelectorAll('.page'));
-let currentPageIndex = 0; // Track current page index
+let currentPageIndex = 0; 
 
-// Add click event listeners to navbar links
 navLinks.forEach((link, index) => {
     link.addEventListener('click', (e) => {
-        e.preventDefault(); // Prevent default anchor behavior
-        const targetId = link.getAttribute('href'); // Remove #
+        e.preventDefault(); 
+        const targetId = link.getAttribute('href'); 
         switchPage(targetId, index);
     });
 });
@@ -40,38 +39,29 @@ const pageIDs = {
     5: 'contact',
 }
 
-// Function to switch pages
 function switchPage(targetId, newIndex) {
     const currentPage = pages[currentPageIndex];
     const targetPage = document.getElementById(pageIDs[newIndex]);
 
-    if (currentPage === targetPage) return; // No change needed
+    if (currentPage === targetPage) return; 
 
-    // Determine slide direction
     const isForward = newIndex > currentPageIndex;
     const slideOutClass = isForward ? 'slide-out-left' : 'slide-out-right';
     const slideInClass = isForward ? 'slide-in-right' : 'slide-in-left';
 
-    // Remove active class from current page and add slide-out animation
-    console.log(currentPage);
-    console.log(targetPage);
     currentPage.classList.remove('active');
     currentPage.classList.add(slideOutClass);
 
-    // Add active class and slide-in animation to target page
     targetPage.classList.add('active', slideInClass);
 
-    // Update navbar active state
     navLinks.forEach(link => link.classList.remove('active'));
     document.querySelector(`.nav-link[href="${targetId}"]`).classList.add('active');
 
-    // Update current page index
     currentPageIndex = newIndex;
 
-    // Clean up animation classes after transition
     setTimeout(() => {
         currentPage.classList.remove(slideOutClass);
         targetPage.classList.remove(slideInClass);
-    }, 250); // Match transition duration in CSS
+    }, 250); 
 }
 
